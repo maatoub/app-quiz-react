@@ -30,7 +30,6 @@ class App extends React.Component {
     return (
       <div className={styles.subscribe_box}>
         <h2>Welcome to the Java Quiz</h2>
-        <h3>created by Zaiyr Sharsheev</h3>
         <form className={styles.subscribe} onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Your name or nickname" autocomplete="off" required="required" value={this.state.value} onChange={this.handleChange}/>
           <button type="submit"> <span>Start</span></button>

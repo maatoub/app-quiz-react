@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './SignInForm.css';
 
-const API = 'https://quiz-spring-boot-app.herokuapp.com/authenticate';
+const API = 'http://localhost:8080/authenticate';
 
 class SignInForm extends Component {
 	constructor() {

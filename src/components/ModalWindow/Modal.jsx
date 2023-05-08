@@ -1,7 +1,7 @@
 import React from "react";
 import './Modal.css';
 
-const API = 'https://quiz-spring-boot-app.herokuapp.com/questions/';
+const API = 'http://localhost:8080/questions/';
 
 export default class Modal extends React.Component {
     constructor() {

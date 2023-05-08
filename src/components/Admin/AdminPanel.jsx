@@ -2,7 +2,7 @@ import React from 'react';
 import './AdminPanel.css';
 import Modal from '../ModalWindow/Modal';
 
-const API = 'https://quiz-spring-boot-app.herokuapp.com/questions/';
+const API = 'http://localhost:8080/questions/';
 
 export default class AdminPanel extends React.Component{
 

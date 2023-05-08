@@ -3,7 +3,7 @@ import React from 'react'
 import Question from './Question/Question'
 import './Question/Question.css'
 
-const API = 'https://quiz-spring-boot-app.herokuapp.com/questions/'
+const API = 'http://localhost:8080/questions/'
 
 export default class Quiz extends React.Component {
 
