@@ -2,8 +2,8 @@ import React from 'react';
 import './AdminPanel.css';
 import Modal from '../ModalWindow/Modal';
 
-const API = 'http://localhost:8080/questions/';
-
+const API = 'https://opentdb.com/api.php?amount=10&category=22&difficulty=medium&type=multiple';
+//  'http://localhost:8080/questions/'
 export default class AdminPanel extends React.Component{
 
   constructor() {
@@ -23,6 +23,7 @@ export default class AdminPanel extends React.Component{
 		   .then(response => response.json())
 		   .then(result => {
          this.setState({...this.state, questions: result})
+         console.log(result)
        })
 		   .catch(err => console.log(err));
 
@@ -97,7 +98,7 @@ export default class AdminPanel extends React.Component{
   }
 
 
-    render(){
+    render() {
         return (
             <>
             <nav className="navbar navbar-inverse navbar-fixed-top">
