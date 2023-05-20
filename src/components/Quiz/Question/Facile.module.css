@@ -1,0 +1,30 @@
+ #lab {
+    
+     margin-left: -80px;
+     margin-top: -4px;
+     position: absolute;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 20px;
+ }
+
+#btn {
+    margin-left: 280px;
+    border-radius: 20px;
+    background-color: rgb(61, 250, 44);
+}
+
+#costumModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(47, 245, 106);
+    padding: 90px;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#headerModal {
+   margin-top: -60px;
+   padding: 20px;
+}
