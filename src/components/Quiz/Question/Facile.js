@@ -11,16 +11,33 @@ function Facile({ userName }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const inputRef = useRef(null);
+  const API = 'http://localhost:8080/users/createUser';
+
   const handleShowModal = () => {
     setShowModal(true);
+    postUser();
   };
 
+  const postUser = () => {
+    fetch(API, {
+      method: 'post',
+      headers: {
+        Accept: 'application/json, text/plain',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: localStorage.getItem("name"),
+        score: score.toString,
+      })
+    }).then((res) => res.json())
+      .then((res) => console.log(res));
+  }
   const handleCloseModal = () => {
     setShowModal(false);
   };
   useEffect(() => {
     fetch(
-      "https://opentdb.com/api.php?amount=20&category=22&difficulty=easy&type=multiple"
+      "https://opentdb.com/api.php?amount=5&category=22&difficulty=easy&type=multiple"
     )
       .then((reponse) => reponse.json())
       .then((res) => {
@@ -49,7 +66,8 @@ function Facile({ userName }) {
   };
 
   const handleRefresh = () => {
-    window.location.reload();
+    // window.location.reload();
+    window.location = "/category";
     setScore(0);
   };
   const handleOptionChange = (event) => {

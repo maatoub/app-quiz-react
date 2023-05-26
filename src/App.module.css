@@ -104,13 +104,13 @@ body {
   transform: translateX(115px);
 }
 
-.btn_admin{
+/* .btn_admin{
   font-family: 'Marcellus', serif;
   margin-top: 20px;
   color: red;
   text-decoration: none;
   font-weight: 900;
-}
+} */
 
 .btn_admin:hover{
   font-family: 'Marcellus', serif;
@@ -119,4 +119,19 @@ body {
   font-weight: 900;
   font-size: 18px;
   text-decoration: none;
+}
+.userTable{
+margin-right: 90%;
+top: 0;
+/* margin-bottom: 90%; */
+height: 10ch;
+width: 50px;
+/* height : 100px; */
+text-decoration-color: black;
+color: white;
+/* padding-bottom: 90%; */
+/* margin-top: 20px; */
+/* left: 10; */
+/* display: block; */
+/* top: 0%; */
 }

@@ -9,10 +9,27 @@ function Moyen() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const API = 'http://localhost:8080/users/createUser';
 
   const handleShowModal = () => {
     setShowModal(true);
+    postUser();
   };
+
+  const postUser = () => {
+    fetch(API, {
+      method: 'post',
+      headers: {
+        Accept: 'application/json, text/plain',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: localStorage.getItem("name"),
+        score: score.toString,
+      })
+    }).then((res) => res.json())
+      .then((res) => console.log(res));
+  }
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -45,7 +62,8 @@ function Moyen() {
   };
 
   const handleRefresh = () => {
-    window.location.reload();
+    // window.location.reload();
+    window.location = "/category";
     setScore(0);
   };
   return (

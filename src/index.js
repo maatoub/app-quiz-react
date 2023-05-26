@@ -11,12 +11,13 @@ import Category from "./components/Category/Category";
 import Facile from "./components/Quiz/Question/Facile";
 import Moyen from "./components/Quiz/Question/Moyen";
 import Difficile from "./components/Quiz/Question/Difficile";
+import UserTable from "./components/Score/Score";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" render={() => <App />} />
       <Route path="/quiz" render={() => <Quiz />} />
-
+      <Route path="/score" render={() => <UserTable/>} />
       <Route path="/login" render={() => <SignInForm />} />
       <Route path="/admin" render={() => <AdminPanel />} />
       <Route path="/category" render={() => <Category />} />
@@ -28,7 +29,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
