@@ -10,7 +10,7 @@ function UserTable() {
       .then(data => setUsers(data))
       .catch(error => console.log(error));
   }, []);
-
+  users.sort((a, b) => b.score - a.score);
   return (
     <div className="container">
       <div className="table-wrapper">
